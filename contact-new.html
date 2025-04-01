@@ -30,44 +30,17 @@
       </div>
     </header>
     <main class="px-3">
-      <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-        <div class="form-floating mb-3">
-          <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-          <label for="name">Name</label>
-          <div class="invalid-feedback" data-sb-feedback="name:required">Your name is required!</div>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <div class="contact-left-title">
+            <h2>Contact St. Agnes SVdP Conference</h2>
+            <hr>
         </div>
-        <div class="form-floating mb-3">
-          <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-          <label for="emailAddress">Email Address</label>
-          <div class="invalid-feedback" data-sb-feedback="emailAddress:required">An email address is required so we can reach back out to you!</div>
-          <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Your email address is not valid!</div>
-        </div>
-        <div class="form-floating mb-3">
-          <input class="form-control" id="subject" type="text" placeholder="Name" data-sb-validations="required" />
-          <label for="name">Subject</label>
-          <div class="invalid-feedback" data-sb-feedback="name:required">A subject is required!</div>
-        </div>
-        <div class="form-floating mb-3">
-          <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-          <label for="message">Message</label>
-          <div class="invalid-feedback" data-sb-feedback="message:required">A message as to why you are reaching out to us is required!</div>
-        </div>
-        <div class="d-none" id="submitSuccessMessage">
-          <div class="text-center mb-3">
-            <div class="fw-bolder">Your message has been submitted!</div>
-
-            <p>To activate this form, sign up at</p>
-            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-
-          </div>
-        </div>
-        <div class="d-none" id="submitErrorMessage">
-          <div class="text-center text-danger mb-3">There was an error in sending your message!</div>
-        </div>
-        <div class="d-grid">
-          <button class="btn btn-lg btn-dark fw-bold disabled" id="submitButton" type="submit">Submit Message</button>
-        </div>
-      </form>
+        <input type="hidden" name="access_key" value="4a96c560-4f21-4eda-b48c-cd5f2f3b66b0">
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
     </main>
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
       <div class="row">
